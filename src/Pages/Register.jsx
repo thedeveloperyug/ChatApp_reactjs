@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { doc, setDoc } from "firebase/firestore";
 // import { getAuth } from "firebase/auth";
-import {  createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { db } from '../firebase';
 import { auth } from '../firebase';
@@ -55,30 +55,29 @@ const Register = () => {
     }
     return (
         <div className='formContainer'>
-            <section className="text-gray-600 bg-slate-300 max-h-max h-screen body-font">
+            <section className="text-gray-600  body-font">
                 <form onSubmit={handleSubmit}>
-                    <div className="container lg:px-40 sm:px-20 py-32 sm:my-10 mx-auto flex flex-wrap items-center">
-                        <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-                            <h1 className="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
-                            <p className="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p>
+                    <div className="container lg:px-40 sm:px-20 sm:my-10 mx-auto justify-center  items-center">
+                        <div className='justify-center mx-auto mb-10'>
+                            <h2 className='text-center text-4xl text-gray-200 font-extrabold spa font-Poppins'>Register</h2>
                         </div>
-                        <div className="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-                            <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Sign Up</h2>
+                        <div className="lg:w-2/6 md:w-1/2 bg-gradient-to-b from-pink-500  to-orange-300  justify-center mx-auto rounded-lg p-8 flex flex-col w-full mt-10 md:mt-0">
+                            {/* <h2 className="text-gray-100 font-semibold text-2xl  title-font mb-5">Sign Up</h2> */}
                             <div className="relative mb-4">
-                                <label htmlFor="full-name" className="leading-7 text-sm text-gray-600">Full Name</label>
-                                <input type="text" id="full-name" name="full-name" autoComplete='off' className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <label htmlFor="full-name" className="leading-7 font-Poppins font-extralight text-lg mb-10 text-gray-100">Full Name</label>
+                                <input type="text" required id="full-name" name="full-name" autoComplete='off' className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                             <div className="relative mb-4">
-                                <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                                <input type="email" id="email" name="email" autoComplete='off' className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <label htmlFor="email" className="leading-7 font-Poppins font-extralight text-lg mb-10 text-gray-100">Email</label>
+                                <input type="email" required id="email" name="email" autoComplete='off' className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                             <div className="relative mb-4">
-                                <label htmlFor="password" className="leading-7 text-sm text-gray-600">Password</label>
-                                <input type="password" id="pass" autoComplete='off' name="password" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <label htmlFor="password" className="leading-7 font-Poppins font-extralight text-lg mb-10 text-gray-100">Password</label>
+                                <input type="password" required id="pass" autoComplete='off' name="password" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             </div>
                             <div className="relative mb-4">
-                                <label htmlFor="file" className="leading-7 text-sm text-gray-600">Choose Avatar</label>
-                                <input type="file" className="block  w-full text-sm text-slate-500
+                                <label htmlFor="file" className="leading-7 font-Poppins font-extralight text-lg mb-10 text-gray-100">Choose Avatar</label>
+                                <input type="file" required className="block w-full rounded-full text-sm text-slate-500
                                     file:mr-4 file:py-2 file:px-4
                                     file:rounded-full file:border-0
                                     file:text-sm file:font-semibold
@@ -86,11 +85,11 @@ const Register = () => {
                                     hover:file:bg-violet-200
                                     "/>
                             </div>
-                            <button type='submit' className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Register</button>
-                            <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Already Have an Account? 
-                  <Link to="/login" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Log In</Link>
-                </p>
+                            <button type='submit' className="text-white rounded-full bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600  text-lg">Register</button>
+                            <p className="font-Poppins font-extralight text-lg mt-10 text-gray-100 dark:text-gray-400">
+                                Already Have an Account?
+                                <Link to="/login" className="font-medium font-Poppins font-extralight text-lg mt-10 text-gray-100 hover:underline dark:text-primary-500">Log In</Link>
+                            </p>
                         </div>
                     </div>
                     {err && <span>Something went wrong</span>}

@@ -3,7 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 body {
-    background-color: azure;
+  background: rgb(131,58,180);
+  background: linear-gradient(185deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.5047268907563025) 50%, rgba(252,176,69,1) 100%);
    
   }
 
@@ -13,6 +14,8 @@ body {
     padding: 20px 0;
    
   }
+ 
+ 
   .navbar{
     position:fixed;
     width: 100%;

@@ -34,7 +34,7 @@ const handleSelect = (u) => {
 
 return (
   <>
-    <div className='chats'>
+    <div className='chats '>
       {Object.entries(chats)?.sort((a,b)=>b[1].date - a[1].date).map((chat) => (
         // <div className='bg-transparent text-center text-base font-Poppins font-medium border-b-2 border-opacity-50 border-gray-600'>
           <div key={chat[0]} onClick={()=>handleSelect(chat[1]?.userInfo)} className='flex cursor-pointer items-center text-base font-Poppins font-medium border-b-2 border-opacity-50 border-gray-600 hover:bg-gray-400 '>

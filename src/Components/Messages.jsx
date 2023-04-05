@@ -19,7 +19,7 @@ const Messages = () => {
   // console.log(messages)
   
   return (
-    <div style={{height:"448px"}} className='messages overflow-y-scroll ' >
+    <div style={{height:"448px"}} className='mt-2 messages overflow-y-scroll ' >
       {messages.map(m=>(
         <Message message={m} key={m.id}/>
         ))}

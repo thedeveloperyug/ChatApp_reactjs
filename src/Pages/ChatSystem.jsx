@@ -6,6 +6,7 @@ import { Navigate } from 'react-router';
 
 
 
+
 const ChatSystem = () => {
     const currentUser = useContext(AuthContext)
     const ProtectedRoute = ({ children }) => {
@@ -16,7 +17,8 @@ const ChatSystem = () => {
     }
     return (
 
-            <div className=' '><p className='absolute -top-2 py-24 text-center left-1/2 right-0 left-0 justify-center font-Poppins font-semibold leading-8 text-lg text-sky-900'>Chat Admin - <span className='border-2 px-2 border-gray-500 rounded-xl '> thedeveloperyug</span></p>
+            <div className=''><p className='absolute -top-2 py-10 text-center left-1/2 right-0 left-0 justify-center font-Poppins font-semibold leading-8 text-lg text-sky-900'>Chat Admin - <span className='border-2 px-2 border-gray-500 rounded-xl '> thedeveloperyug</span></p>
+            <p className='absolute top-8 py-10 text-center left-1/2 right-0 left-0 justify-center font-Poppins font-semibold leading-8 text-lg text-sky-900'>Try Searching " <i>Yogesh</i> "</p>
         <div className='chatContainer'>
             <div className="chatBox">
                 <Slidebar/>

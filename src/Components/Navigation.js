@@ -17,11 +17,11 @@ const Navigation = () => {
             <span className="ml-3 text-2xl font-semibold font-Poppins text-blue-900">thecodersfactory</span>
           </Link>
           <nav className="md:ml-auto md:mr-auto font-Poppins text-zinc flex flex-wrap text-xl text-center items-center font-bold justify-center space-x-4">
-            <Link to="/learn" className="hover:text-gray-900 uppercase ">Learn</Link>
+            {/* <Link to="/learn" className="hover:text-gray-900 uppercase ">Learn</Link>
             <Link to="/about" className="hover:text-gray-900 uppercase ">Projects</Link>
             <Link to="/discuss" className="hover:text-gray-900 uppercase ">Discussions</Link>
             <Link to="/developers" className="hover:text-gray-900 uppercase ">Developers</Link>
-            <Link to="/about" className="hover:text-gray-900 uppercase ">About</Link>
+            <Link to="/about" className="hover:text-gray-900 uppercase ">About</Link> */}
             <Link to="/Chatsys" className="hover:text-gray-900 uppercase ">Chat</Link>
 
           </nav>
@@ -34,7 +34,7 @@ const Navigation = () => {
               <Link to={(!currentUser) ? "/login" : "/chatsys"} className="items-center text-orange-800 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(!currentUser) ? " Log In " : currentUser.displayName }</Link>
               <button onClick={()=>signOut(auth) } className="items-center text-zinc-900 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(currentUser) ? "Log out" : ""}</button>
 
-              <Link to="/register" className="items-center text-zinc-900 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(!currentUser) ? " Register " : ""}</Link>  
+              <Link to="/" className="items-center text-zinc-900 font-bold font-Poppins border-0 py-1 px-3 focus:outline-none hover:text-orange-900 rounded-lg text-xl mt-4 md:mt-0">{(!currentUser) ? " Register " : ""}</Link>  
             
             </div>
 
