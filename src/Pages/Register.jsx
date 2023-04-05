@@ -55,7 +55,7 @@ const Register = () => {
     }
     return (
         <div className='formContainer'>
-            <section className="text-gray-600  body-font">
+            <section className="text-gray-600 h-screen  body-font">
                 <form onSubmit={handleSubmit}>
                     <div className="container lg:px-40 sm:px-20 sm:my-10 mx-auto justify-center  items-center">
                         <div className='justify-center mx-auto mb-10'>
