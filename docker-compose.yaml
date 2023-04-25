@@ -1,18 +1,12 @@
 version: '3'
 services:
-  front:
+  reactui:
     build:
-      context: './'  #foldername
-      dockerfile: Dockerfile
+      context: ./
     ports:
-      -3000:3000
-    container_name: react-chat-app
-    networks:
-      - mern-stack-networks
+      - "3000:3000"
+    container_name: reactui
+    stdin_open: true
     volumes:
-      - ./:/app #folder map to app
-networks:
-  mern-stack-network:
-volumes:
-  ./:/app
-
+       - ./:/usr/src/app/
+       - /usr/src/app/node_modules

@@ -1,8 +1,8 @@
-FROM node:alpine
+FROM node:16
 WORKDIR /REACT_CHAT_APP
 COPY ./package.json ./
 COPY ./package-lock.json ./
 COPY ./ ./
-RUN npm -f install
+RUN npm install
 EXPOSE 3000
 CMD ["npm", "run", "start"]
