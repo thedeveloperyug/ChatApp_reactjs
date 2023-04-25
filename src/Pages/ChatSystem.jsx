@@ -5,8 +5,6 @@ import { AuthContext } from '../context/AuthContext';
 import { Navigate } from 'react-router';
 
 
-
-
 const ChatSystem = () => {
     const currentUser = useContext(AuthContext)
     const ProtectedRoute = ({ children }) => {
